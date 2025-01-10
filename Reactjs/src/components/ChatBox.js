@@ -24,13 +24,16 @@ const Chatbox = () => {
     setChatHistory((prev) => [...prev, newMessage]);
 
     try {
-      const response = await axios.post("http://127.0.0.1:8000/chat", {
-        language: "vi",
-        messages: chatHistory.concat(newMessage).map(({ content, type }) => ({
-          content,
-          type,
-        })),
-      });
+      const response = await axios.post(
+        "https://capstone-project-1-5190.onrender.com/chat",
+        {
+          language: "vi",
+          messages: chatHistory.concat(newMessage).map(({ content, type }) => ({
+            content,
+            type,
+          })),
+        }
+      );
       setMessage("");
       const botMessage = {
         content: response.data || "Xin lỗi, tôi không thể trả lời câu hỏi này.",
