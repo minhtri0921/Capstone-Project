@@ -1,0 +1,14 @@
+langchain-pinecone
+langgraph
+langchain
+langchain_community
+python-dotenv
+fastapi==0.115.2
+uvicorn
+pytz
+PyJWT==2.8.0
+python_jose==3.3.0
+langchain-google-genai
+python-dateutil
+pandas
+openpyxl
